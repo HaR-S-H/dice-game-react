@@ -1,17 +1,21 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-// import './App.css'
-
+import "./index.css"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './components/Home/Home.jsx'
+import Game from './components/Game/Game.jsx'
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-       <div className="p-6 bg-indigo-600 text-white rounded-lg">
-      <h1 className="text-3xl font-semibold">Welcome to the Home Page</h1>
-      <p>This is a page styled with Tailwind CSS.</p>
-    </div>
+    <Router>
+    <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/game" element={<Game />} />
+    </Routes>
+  </Router>
     </>
   )
 }
