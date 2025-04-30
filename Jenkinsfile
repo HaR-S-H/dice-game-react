@@ -1,6 +1,6 @@
 node {
     stage('Checkout') {
-        git 'https://github.com/HaR-S-H/dice-game-react.git'
+        'gitclone https://github.com/HaR-S-H/dice-game-react.git'
     }
 
     stage('Build') {
